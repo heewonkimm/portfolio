@@ -1,0 +1,1207 @@
+
+/*레이아웃 시작*/
+#wrap {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    max-width: 93%;
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 30px 0px;
+    z-index: 900;
+    mix-blend-mode: difference;
+}
+
+#main {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    position: sticky;
+    background: #000;
+    top: 0;
+}
+
+#about {
+    width: 100%;
+    margin: 0 auto;
+    background: #f6f6f6;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding-top: 50px;
+    position: relative;
+}
+
+#plusBox {
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+}
+
+#work {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+#poster {
+    width: 100%;
+    margin: 0  auto;
+    position: relative;
+}
+
+#contact {
+    max-width: 100%;
+    width: 100%;
+    height: 1960px;
+    margin: 0 auto;
+    padding-top: 200px;
+    position: relative;
+    background: #f6f6f6;
+}
+
+footer {
+    max-width: 100%;
+    width: 100%;
+    height: 570px;
+    margin: 0 auto;
+    border-top: 1px solid #fff;
+    position: relative;
+    background: #000;
+}
+/*레이아웃 끝*/
+
+
+
+/*헤더 시작*/
+header .leftName {
+    float: left;
+    font-size: 28px;
+    font-weight: 400;
+    color: #fff;
+}
+
+header .rightButton {
+    float: right;
+    margin-top: -2px;
+    padding: 0px 0px 5px 12px;
+    cursor: pointer;
+    position: relative;
+}
+
+header .rightButton ul li:not(.closeBtn) {
+    float: left;
+    width: 50%;
+    line-height: 23px;
+    padding-right: 1.5px;
+    transition: all 0.5s;
+}
+
+header .rightButton ul li span {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+header .rightButton:hover span {
+    background: #d1ed5d;
+}
+
+/*메뉴 버튼*/
+.rightButton.active li span {
+    background: #d1ed5d;
+}
+
+.rightButton.active li:nth-of-type(1) {
+    transform: translate(10px,10px);
+}
+
+.rightButton.active li:nth-of-type(2) {
+    transform: translate(-10px,10px);
+    
+}
+
+.rightButton.active li:nth-of-type(3) {
+    transform: translate(10px,-10px);
+}
+
+.rightButton.active li:nth-of-type(4) {
+    transform: translate(-10px,-10px);
+}
+
+.closeBtn {
+    width: 0px;
+    height: 0px;
+    background: #d1ed5d;
+    border-radius: 50%;
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    transform: translate(-50%,-50%);
+    transition: all 0.5s;
+}
+
+.rightButton.active .closeBtn {
+    width: 55px;
+    height: 55px;
+    transition: all 0.5s;
+}
+
+.rightButton .bar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.rightButton .bar div {
+    width: 0;
+    height: 2px;
+    border-radius: 20px;
+    background: #222;
+    transition: all 0.5s;
+}
+
+.rightButton.active .bar div {
+    width: 27px;
+    height: 2px;
+    transition: all 0.5s;
+}
+
+.rightButton .bar div:first-child {
+    transform: rotate(-45deg);
+}
+
+.rightButton .bar div:last-child {
+    margin-top: -3px;
+    transform: rotate(45deg);
+}
+/*헤더 끝*/
+
+
+
+/*메뉴 시작*/
+#menu {
+    width: 70%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -70%;
+    -webkit-transition: left 0.5s ease-in-out;
+    transition: left 0.5s ease-in-out;
+    z-index: 890;
+    
+    background: #111
+}
+
+#menu.on {
+    position: fixed;
+    top: 0;
+    left: 0;
+    -webkit-transition: left 0.5s ease-in-out;
+    transition: left 0.5s ease-in-out;
+}     
+
+.menuTxt {
+    position: absolute;
+    top: 54%;
+    left: 40%;
+    transform: translate(-50%,-50%);
+    width: 750px;
+}
+
+.menuTxt li {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.menuTxt div.on{
+    animation: fadeInUp 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+
+.menuTxt p {
+    font-size: 20px;
+    color: #888;
+    font-weight: 100;
+    margin-bottom: -45px;
+}
+
+.menuTxt a {
+    font-size: 105px;
+    color: #888;
+    font-weight: 300;
+    text-align: left;
+    padding-left: 70px;
+    transition: all 0.5s;
+}
+
+.menuTxt li:hover a, .menuTxt li:hover p {
+    color: #fff;
+    transition: all 0.5s;
+}
+
+.menuTxt a:hover {
+    font-weight: 600;
+    transition: all 1s;
+}
+
+.menuTxt li a.on {
+    color: #fff;
+}
+
+.linkTxt {
+    position: absolute;
+    bottom: 6%;
+    right: 6%;
+}
+
+.linkTxt li {
+    padding-bottom: 8px;
+}
+
+.linkTxt a {
+    font-size: 21px;
+    color: #f5f5f5;
+    font-weight: 100;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.linkTxt a::after {
+    content:"";
+    width: 0;
+    display: inline-block;
+    position: absolute;
+    bottom:0;
+    left:0;
+    border-bottom: 1px solid #fff;
+    transition: 0.4s all;
+}
+
+.linkTxt a:hover::after {
+    width: 100%;
+}
+/*메뉴 끝*/
+
+
+
+/*메인 시작*/
+#main .txtBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    height: 65%;
+    font-size: 160px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 185px;
+}
+
+#main .txtBox div {
+    overflow: hidden;
+}
+
+.txtBox .title01 {
+    position: fixed;
+    top: 0%;
+    right: 54%;
+    transition: all 0.2s;
+}
+
+.txtBox .title02 {
+    position: fixed;
+    top: 50%;
+    left: 52%;
+    transform: translateY(-50%);
+    transition: all 0.2s;
+}
+
+.txtBox .title03 {
+    position: fixed;
+    bottom: 0%;
+    right: 57.5%;
+    transition: all 0.2s;
+}
+
+.txtBox .title01 p, .txtBox .title02 p, .txtBox .title03 p {
+    animation: RotateInUp 1s;
+    animation-fill-mode: both;
+}
+
+#main .mainT02 {
+    animation-delay: 0.5s;
+}
+
+#main .mainT03 {
+    animation-delay: 1s;
+}
+
+#main .scrollBox {
+    position: absolute;
+    right: 4%;
+    bottom: 4%;
+}
+
+.scrollBox {
+    width: 200px;
+    height: 200px;
+    animation: opacity_ani 1.4s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+}
+
+.scrollBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: rotate_image 14s linear infinite;
+    transform-origin: 50% 50%;
+}
+
+.scrollBox svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.st1{fill:none;stroke:#FFFFFF;stroke-width:4.5;stroke-miterlimit:10;}
+
+.st2{fill:none;stroke:#FFFFFF;stroke-width:4.3404;stroke-miterlimit:10;}
+/*메인 끝*/
+
+
+
+/*어바웃 디테일 시작*/
+#about .innerBox {
+    max-width: 1600px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#about .innerBox > .left {
+    width: 50%;
+    height: 840px;
+    position: sticky;
+    top: 0;
+    padding: 110px 0;
+    opacity: 0;
+}
+
+#about .innerBox > .right {
+    width: 50%;
+    height: 100%;
+    padding: 110px 0;
+    opacity: 0;
+}
+
+.profile {
+    width: 64%; 
+    margin: 0 18%;
+    overflow: hidden;
+}
+
+.profile {
+    animation: border-radius 8s linear infinite;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profiletxt .mainTilte {
+    font-size: 25px;
+    padding-bottom: 70px;
+}
+
+.profiletxt .mainTilte .ef01 {
+    font-size: 40px;
+}
+
+.profiletxt .mainTilte .ef02 {
+    font-weight: 700;
+}
+
+.name {
+    padding-bottom: 30px;
+}
+
+.name li {
+    padding-bottom: 5px;
+}
+
+.name li:first-child {
+    font-size: 27px;
+    font-weight: 500;
+}
+
+.name li:last-child {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.birth li {
+    padding-bottom: 7px;
+}
+
+.birth div:first-child {
+    float: left;
+    width: 10%;
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.birth div:last-child {
+    float: left;
+    width: 90%;
+    font-size: 19px;
+}
+
+.birth div:last-child li {
+    color: #555;
+}
+
+.education, .license, .skills {
+    padding-top: 40px;
+}
+
+.education ul {
+    padding-left: 55px;
+}
+
+.education ul li {
+    list-style: disc;
+    padding-bottom: 10px;
+}
+
+.profiletxt .subtitle{
+    font-size: 21px;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.profiletxt .minitxt li{
+    font-size: 20px;
+    color: #555;
+}
+
+.license li {
+    padding-bottom: 18px;
+    color: #555;
+}
+
+.license p {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 17px;
+    padding: 5px 15px;
+    transition: all 0.3s;
+    box-shadow: 0px 0px 20px 5px #e5e5e5;
+}
+
+.license .minitxt {
+    padding-left: 32px;
+}
+
+.license .left {
+    float: left;
+    width: 45%;
+}
+
+.license .right {
+    float: left;
+}
+
+.license .left li:hover p, .license .right li:hover p {
+    transition: all 0.3s;
+}
+
+.license .left li:nth-child(1):hover p {
+    background: #cecbd6;
+    cursor: default;
+}
+
+.license .left li:nth-child(2):hover p {
+    background: #f8d7c1;
+    cursor: default;
+}
+
+.license .left li:nth-child(3):hover p {
+    background: #d0e9e9;
+    cursor: default;
+}
+
+.license .right li:nth-child(1):hover p {
+    background: #e8d3d1;
+    cursor: default;
+}
+
+
+.license .right li:nth-child(2):hover p {
+    background: #d5edb9;
+    cursor: default;
+}
+
+.license .right li:nth-child(3):hover p {
+    background: #ffffb5;
+    cursor: default;
+}
+
+.skills .minitxt {
+    padding-left: 32px;
+}
+
+.skills > ul > li {
+    float: left;
+    width: 33.3333%;
+}
+
+.skills .box li {
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+}
+
+.skills img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+.skillBox > li > div:not(.list) {
+    width: 70px;
+    height: 70px; 
+    margin-left: 35px;
+}
+
+.skillBox > li > div {
+    margin-top: 20px;
+}
+
+#about .innerBox > .left.ani {
+    animation: About_slideright 1s;
+    animation-timing-function: cubic-bezier(.33,.71,.23,.97);
+    animation-fill-mode: both;
+}
+
+#about .innerBox > .right.ani {
+    animation: About_slideleft 1s;
+    animation-timing-function: cubic-bezier(.33,.71,.23,.97);
+    animation-fill-mode: both;
+}
+/*어바웃 디테일 끝*/
+
+
+
+/*작업물 시작*/
+/*프로그레스바*/
+.progress-container {
+    position: fixed;
+    top: 0;
+    left: -92%;
+    width: 100%;
+    height: 100%;
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    height: 8px;
+    background: #d1ed5d;
+    width: 0%;
+}
+
+.progress-bar2 {
+    height: 100%;
+    border-right: 1px solid #aaa;
+    width: 0%;
+}
+
+.triangle {
+    position: absolute;
+    top: 13%;
+    margin-left: -14px;
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid transparent;
+    border-top: 8px solid transparent;
+    border-left: 13px solid #d1ed5d;
+    border-right: 13px solid transparent;
+    transform: rotate(90deg);
+}
+
+.progress-container .dt {
+    top: 87%;
+    transform: rotate(-90deg);
+}
+
+/*배경 텍스트*/
+.bgTitle {
+    position: sticky;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.bgTitle p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'Sarabun';
+    font-size: 595px;
+    font-weight: 600;
+    color: #d1ed5d;
+    padding-bottom: 75px;
+    line-height: 340px;
+    opacity: 0;
+}
+
+.bgTitle_line {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 1625px;
+    height: 84px;
+    background: #d1ed5d;
+    opacity: 0; 
+}
+
+.bgTitle p.ani {
+    animation: txtIncrease 1.7s ease-in-out;
+    animation-delay: 1.9s;
+    animation-fill-mode: both;
+}
+
+.bgTitle_line.ani {
+    animation: slideright 2s ease-in-out;
+}
+
+/*가로스크롤*/
+.sticky-parent/*id=work*/{
+    height: 550vh;
+    position: relative;
+}
+
+.sticky {
+    position: sticky;
+    top: 0px;
+    max-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.dim {
+    display: block;
+    min-width: 57vw;
+    height: 100vh;
+    position: relative;
+}
+
+.first {
+    margin-left: 28vw;
+}
+
+.horizontal {
+    display: flex;
+    opacity: 0;
+    position: relative;
+}
+
+.horizontal.ani {
+    animation: slideleft 1.7s;
+    animation-delay: 3.3s;
+    animation-fill-mode: both;
+}
+
+.size {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 68%;
+}
+
+.dim img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dimtxt {
+    position: absolute;
+    left: 50%;
+    bottom: 15%;
+    transform: translateX(-50%);
+    height: 55px;
+    text-align: center;
+}
+
+.dimtxt li:first-child {
+    font-size: 22px;
+    font-weight: 400;
+    color: #eee;
+    padding-bottom: 5px;
+}
+
+.dimtxt li:last-child {
+    font-size: 16px;
+    color: #aaa;
+}
+
+.shadowBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99.3%;
+    background: rgba(0,0,0,0.7);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.shadowBox:hover {
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.shadowBox ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 98%;
+    text-align: center;
+}
+
+.shadowBox li {
+    display: inline-block;
+    width: 42%;
+    font-size: 19px;
+    border: 1px solid #f8f8f8;
+    border-radius: 7px;
+    color: #f8f8f8;
+    font-weight: 300;
+    margin: 0 2%;
+    transition: all 0.3s;
+}
+
+.shadowBox li a {
+    display: block;
+    padding: 18px 0;
+}
+
+.shadowBox li:hover {
+    background: #f8f8f8;
+    color: #222;
+    transition: all 0.3s; 
+}
+/*작업물 끝*/
+
+
+
+/*포스터 페이지 시작*/
+#poster .innerbox {
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 80px 0 100px 0;
+}
+
+#poster .mainTxt {
+    font-size: 170px;
+    font-weight: 700;
+    width: 100%;
+}
+
+#poster .mainTxt li {
+    overflow: hidden;
+}
+
+#poster .mainTxt li:first-child {
+    display: inline-block;
+}
+
+#poster .mainTxt li:last-child {
+    text-align: right;
+    padding-right: 8%;
+    line-height: 180px;
+    margin-top: -20px;
+}
+
+#poster .mainTxt li p {
+    opacity: 0;
+}
+
+#poster .mainTxt li p.ani {
+    animation: RotateInUp 1s;
+    animation-fill-mode: both;
+}
+
+#poster .mainTxt li:last-child p.ani {
+    animation-delay: 0.3s;
+}
+
+#poster .subTxt {
+    position: absolute;
+    top: 370px;
+}
+
+#poster .subTxt li {
+    width: 620px;
+    font-size: 27px;
+    padding-left: 15px;
+    overflow: hidden;
+}
+
+#poster .subTxt li p {
+    opacity: 0;
+}
+
+#poster .subTxt li p.ani {
+    animation: fadeInUp 1s;
+    animation-fill-mode: both;
+    animation-delay: 0.6s;
+}
+
+#poster .subTxt li:nth-child(2) p {
+    animation-delay: 0.8s;
+}
+
+.st0 {
+    fill: #363636;
+}
+
+.cont .contImage {
+    float: left;
+    width: 50%;
+    position: relative;
+    margin-top: -150px;
+}
+
+.cont .contImage div {
+    width: 64%;
+    margin: 0 18%;
+    position: absolute;
+}
+
+.cont .contImage img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cont .contTxt {
+    float: right;
+    width: 50%;
+    margin-top: 80px;
+    opacity: 0;
+}
+
+.cont .contTxt.ani {
+    animation: opacity_ani 1s;
+    animation-delay: 1.3s;
+    animation-fill-mode: both;
+}
+
+.cont .contTxt li {
+    font-size: 27px;
+    font-weight: 300;
+    border-bottom: 1px solid #363636;
+    height: 100px;
+    padding: 30px 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.cont .contTxt .highlight {
+    display: inline-block;
+    position: relative;
+    top: -6px;
+    left: 45px;
+}
+
+.contTxt .highlight::after {
+    content:"";
+    width: 0;
+    height: 20px;
+    display: inline-block;
+    background: #d1ed5d;
+    position: absolute;
+    bottom:0;
+    left:0;
+    z-index:-1;
+    transition: 0.4s all;
+}
+
+.contTxt li:hover .highlight::after {
+    width:100%;
+}
+
+.cont .contImage img.ani {
+    animation: slideDown 0.7s;
+    animation-fill-mode: both;
+    animation-timing-function:cubic-bezier(.33,.71,.23,.97);
+}
+
+.cont .contImage img.ani2 {
+    animation: slideDown2 0.7s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(.33,.71,.23,.97);
+}
+/*포스터 페이지 끝*/
+
+
+
+/*컨택트 시작*/
+.rolling {
+    font-size: 180px;
+    text-shadow: -1px -1px 0 #ddd, 1px -1px 0 #ddd, -1px 1px 0 #ddd, 1px 1px 0 #ddd;
+    white-space: nowrap;
+    color: #f6f6f6;
+    padding-top: 100px;
+    line-height: 250px;
+    content: "-";
+}
+
+.halfCircle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;
+    height: 1560px;
+    color: #fff;
+    background: #000;
+    border-top-left-radius: 1300px;
+    border-top-right-radius: 1300px;
+    margin-top: -300px;
+}
+
+.halfCircle div:first-child {
+    text-align: center;
+    font-size: 160px;
+    font-weight: 500;
+    padding-top: 480px;
+    overflow: hidden;
+}
+
+.halfCircle div:last-child {
+    overflow: hidden;
+}
+
+.halfCircle div p {
+    opacity: 0;
+}
+
+.halfCircle div p.ani {
+    animation: fadeInUp 1s;
+    animation-fill-mode: both;
+}
+
+.halfCircle div p:not(.big) {
+    animation-delay: 0.3s;
+}
+
+.halfCircle p.small {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.vertical{
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+    top: 1300px;
+    left: 0;
+}
+
+.vertical svg {
+    height:650px;
+    width:1600px;
+}
+
+.vertical path {
+    fill: none;
+    stroke-width: 8px;
+    stroke: #fff;
+    stroke-linecap:round;
+    stroke-linejoin:round
+}
+/*컨택트 끝*/
+
+
+
+/*푸터 시작*/
+footer .innerBox {
+    max-width: 93%;
+    width: 100%;
+    margin: 0 auto;
+    color: #ddd;
+    overflow: hidden;
+}
+
+.email {
+    display: inline-block;
+    font-size: 90px;
+    font-weight: 700;
+    padding: 20px 100px 50px 0;
+    -webkit-text-fill-color:#000;
+    -webkit-text-stroke: 1.5px #d1ed5d;
+    position: relative;
+}
+
+.email::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 20px;
+    left: 0;
+    -webkit-text-fill-color: #d1ed5d;
+    height: 100%;
+    overflow: hidden;
+    transition: 0.6s;
+}
+
+.email:hover::after{
+  height: 0;
+}
+
+.info {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding: 50px 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.info > ul > li {
+    float: left;
+    width: 50%;
+    
+}
+
+.category li {
+    float: left;
+    width: 35%;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.category li div {
+    display: table;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.category li div:last-child {
+    margin-bottom: 0;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.category li div::after {
+    content:"";
+    width: 0;
+    display: inline-block;
+    position: absolute;
+    bottom:0;
+    left:0;
+    border-bottom: 1px solid #fff;
+    transition: 0.4s all;
+}
+
+.category li div:hover::after {
+    width: 100%;
+}
+
+.bigTxt {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 170px;
+    color: #1f1f1f;
+    font-weight: 300;
+    white-space: nowrap;
+    overflow: hidden;
+    content: "-";
+}
+
+footer .bottom {
+    font-size: 17px;
+    padding-top: 33px;
+    font-weight: 100;
+    color: #aaa;
+}
+
+footer .bottom .copyright {
+    float: left;
+}
+
+footer .bottom .miniTxt {
+    float: right;
+}
+/*푸터 끝*/
+
+
+
+/*커서 커스텀*/
+#cursor {
+    position: fixed;
+    top: -5px;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 999;
+}
+
+#cursor-border {
+    --size: 50px;
+    position: fixed;
+    top: calc(var(--size) / -2);
+    left: calc(var(--size) / -2);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    /*border: 1px solid white;*/
+    box-shadow: 0 0 0 1px white;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
+    height 0.15s ease-out, background-color 0.15s ease-out;
+    z-index: 999;
+}
+
+
