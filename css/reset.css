@@ -1,0 +1,48 @@
+/*reset*/
+* {
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box;
+    cursor: none;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    overflow-x: hidden;
+    color: #222;
+    background: #f6f6f6;
+    transition: background 1s ease;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.clearfix::before, clearfix::after {
+    display: block; content: ''; clear: both;
+}
+
+.color-white {
+  background-color: #f6f6f6;
+}
+
+.color-darkgray {
+  background-color: #222;
+}
+
